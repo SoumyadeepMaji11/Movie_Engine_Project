@@ -69,7 +69,6 @@ if selected == "Top Movies":
     AgGrid(top.head(20), theme='dark')
 
 if selected == "Recommender":
-    # st.subheader("Recommend Movies")
     movies_list = movies['title'].values
     selected_movie_name = st.selectbox(' Search Your Movie Here : : - ', movies_list)
     names = []
@@ -81,7 +80,7 @@ if selected == "Recommender":
         st.markdown("<h5 style='text-align: center; color: white;'> ----> Recommended Movies <---- </h5>",
                     unsafe_allow_html=True)
 
-        # def result():
+       
         a = 0
         for i in range(1, 4):
             cols = st.columns(3)
@@ -98,7 +97,7 @@ if selected == "Recommender":
                     st.text(names[a + 2])
                     st.image(poster[a + 2])
                     a = a + 3
-        # st.container(result())
+        
 
 if selected == "About":
     st.text("Recommender System is a system that seeks to predict or filter preferences according")
